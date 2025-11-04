@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris Neural Network Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+
+<header>
+    <h1>Iris Neural Network Trainer</h1>
+    <button id="toggleTheme">🌗 Tema</button>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>Carregar CSV</h2>
+        <p>O arquivo <b>iris.csv</b> deve estar na pasta do projeto.</p>
+        <button onclick="carregarCSV()">📄 Carregar CSV automaticamente</button>
+        <p id="csvStatus"></p>
+    </section>
+
+    <section class="card">
+        <h2>Treinar Rede Neural</h2>
+        <button onclick="treinar()">🚀 Iniciar Treinamento</button>
+        <div id="loading" class="hidden">Treinando modelo...</div>
+    </section>
+
+    <section class="card">
+        <h2>Gráfico — Loss & Acurácia</h2>
+        <canvas id="lossAccChart"></canvas>
+    </section>
+
+    <section class="card">
+        <h2>Matriz de Confusão</h2>
+        <canvas id="matrixChart"></canvas>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
